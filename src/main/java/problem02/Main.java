@@ -26,6 +26,18 @@ public class Main {
 		
 		// 메소드 구현을 완성 하십시오.
 		
+		
+		
+		
+		
 		return null;
 	}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return super.clone();
+	}
+
+	
 }

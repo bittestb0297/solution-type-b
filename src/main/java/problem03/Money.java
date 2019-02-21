@@ -10,6 +10,7 @@ public class Money {
 	private int amount;
 	
 	public Money(int amount) {
+		
 	}
 
 	public Money add(Money money) {
