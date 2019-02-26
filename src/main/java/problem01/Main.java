@@ -23,24 +23,36 @@ public class Main {
 //		}
 //		System.out.println("max = "+max);
 				
-		arr[0] = -10;
-		arr[1] = -3;
-		arr[2] = 5;
-		arr[3] = 6;
-		arr[4] = -20;
+//		arr[0] = -10;
+//		arr[1] = -3;
+//		arr[2] = 5;
+//		arr[3] = 6;
+//		arr[4] = -20;
+//		
+//		for(int i =0 ; i<=arr.length ; i++) {
+//			
+//			for(int j = 0 ; j<=arr.length ; j++) {
+//				if(arr[i]==4) {
+//					int max = arr[i]*arr[j];
+//					System.out.println(max);
+//				}
+//				
+//			}
+//			
+//		}
 		
-		for(int i =0 ; i<=arr.length ; i++) {
-			
-			for(int j = 0 ; j<=arr.length ; j++) {
-				if(arr[i]==4) {
-					int max = arr[i]*arr[j];
-					System.out.println(max);
+		int[] maxProduct = new int[2];
+		
+		for(int i = 0; i < arr.length - 1; i++) {
+			for(int j = i + 1; j <= arr.length - 1; j++) {
+				if((maxProduct[0] * maxProduct[1]) < (arr[i] * arr[j])) {
+					maxProduct[0] = arr[i];
+					maxProduct[1] = arr[j];
 				}
-				
 			}
-			
 		}
 		
+		System.out.println(String.format("%d %d", maxProduct[0], maxProduct[1]));
 	
 			
 		
